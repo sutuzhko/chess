@@ -1,1 +1,0 @@
-var e=`/chess/figures/knight-white.png`;export{e as t};

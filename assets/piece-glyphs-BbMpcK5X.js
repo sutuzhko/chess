@@ -1,1 +1,0 @@
-function e(e,t){return`/figures/${e}-${t}.png`}var t={pawn:1,knight:3,bishop:3,rook:5,queen:9,king:0},n={queen:0,rook:1,bishop:2,knight:3,pawn:4,king:5};export{t as n,e as r,n as t};
