@@ -1,0 +1,401 @@
+@use 'variables' as v;
+
+/* ── Responsive breakpoints ──
+   max-width (down-to): small / mobile / tablet / laptop
+   min-width (from-up): from-mobile / from-tablet / from-laptop / desktop
+   Все значения управляются переменными из _variables.scss. */
+@mixin small {
+  @media (max-width: #{v.$bp-sm}) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: #{v.$bp-md}) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: #{v.$bp-lg}) { @content; }
+}
+
+@mixin laptop {
+  @media (max-width: #{v.$bp-xl}) { @content; }
+}
+
+@mixin from-mobile {
+  @media (min-width: #{v.$bp-md + 1}) { @content; }
+}
+
+@mixin from-tablet {
+  @media (min-width: #{v.$bp-lg + 1}) { @content; }
+}
+
+@mixin from-laptop {
+  @media (min-width: #{v.$bp-xl + 1}) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: #{v.$bp-xl}) { @content; }
+}
+
+@mixin coarse-touch {
+  @media (pointer: coarse) { @content; }
+}
+
+/* ── Layout helpers ── */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ── v3 surface helpers ── */
+@mixin surface($radius: var(--r-lg)) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius;
+}
+
+@mixin surface-sunk($radius: var(--r-lg)) {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: $radius;
+}
+
+@mixin card-border($radius: var(--r-md)) {
+  border: 1px solid var(--border);
+  border-radius: $radius;
+}
+
+@mixin card-border-strong($radius: var(--r-md)) {
+  border: 1px solid var(--border-strong);
+  border-radius: $radius;
+}
+
+/* ── Affordances ── */
+@mixin clickable {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* v3 focus-ring: 3px glow от accent. */
+@mixin focus-ring {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+}
+
+/* a11y: гарантирует hit-target ≥ 44×44px на coarse-pointer. */
+@mixin hit-target-44 {
+  min-width: 44px;
+  min-height: 44px;
+
+  @include coarse-touch {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ── Animations ── */
+@mixin pulse($name, $color, $duration: 2s, $spread: 6px) {
+  animation: pulse-#{$name} $duration infinite;
+
+  @keyframes pulse-#{$name} {
+    0%, 100% { box-shadow: 0 0 0 0 rgb($color, 0.5); }
+    50%      { box-shadow: 0 0 0 $spread rgb($color, 0); }
+  }
+}
+
+/* ── Custom scrollbar ── */
+@mixin scrollbar($width: 8px) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* ----------------------------------------------------------
+   Shared component-class mixins
+   Включаются в scoped <style> компонентов, которым нужны эти
+   утилитарные классы (.t-*, .btn*, .card*, .moves*, .scroll).
+   ---------------------------------------------------------- */
+
+/* stylelint-disable declaration-block-single-line-max-declarations */
+
+/* Typography helpers (.t-eyebrow / .t-mono / .t-tabular / .t-muted / .t-faint) */
+@mixin typography-helpers {
+  .t-eyebrow {
+    font-family: var(--font-mono), sans-serif;
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 500;
+  }
+
+  .t-mono {
+    font-family: var(--font-mono), sans-serif;
+    font-feature-settings: "tnum", "zero";
+  }
+  .t-tabular { font-variant-numeric: tabular-nums; }
+  .t-muted { color: var(--text-muted); }
+  .t-faint { color: var(--text-faint); }
+}
+
+/* Button family (.btn, .btn--*, .btn-group) */
+@mixin buttons {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    height: 36px;
+    padding: 0 var(--sp-4);
+    border-radius: var(--r-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-sans), sans-serif;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    letter-spacing: var(--tracking-base);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out),
+                border-color var(--dur-fast) var(--ease-out),
+                color var(--dur-fast) var(--ease-out),
+                transform var(--dur-fast) var(--ease-out);
+    user-select: none;
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-strong);
+    }
+    &:active { transform: translateY(1px); }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    &:disabled,
+    &[aria-disabled="true"] {
+      opacity: 0.38;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  .btn--primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-color: var(--accent);
+
+    &:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-soft);
+    }
+  }
+
+  .btn--secondary {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+
+    &:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-strong);
+    }
+  }
+
+  .btn--ghost {
+    background: transparent;
+    border-color: transparent;
+    color: var(--text-muted);
+
+    &:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+    }
+  }
+
+  .btn--danger {
+    color: var(--danger);
+    border-color: var(--border);
+
+    &:hover {
+      background: rgb(217 107 107 / 0.08);
+      border-color: var(--danger);
+    }
+  }
+
+  .btn--sm  { height: 28px; padding: 0 var(--sp-3); font-size: var(--fs-xs); }
+  .btn--lg  { height: 44px; padding: 0 var(--sp-5); font-size: var(--fs-md); }
+  .btn--xl  { height: 56px; padding: 0 var(--sp-6); font-size: var(--fs-lg); }
+  .btn--icon { width: 36px; padding: 0; }
+  .btn--block, .btn--full { width: 100%; }
+
+  .btn--disabled-label {
+    position: relative;
+
+    &::after {
+      content: attr(data-badge);
+      position: absolute;
+      top: -8px;
+      right: -4px;
+      font-size: var(--fs-2xs);
+      background: var(--surface-3);
+      color: var(--text-faint);
+      padding: 1px 5px;
+      border-radius: var(--r-pill);
+      font-family: var(--font-mono), sans-serif;
+      white-space: nowrap;
+    }
+  }
+
+  .btn-group {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    background: var(--surface);
+
+    .btn {
+      border: none;
+      border-radius: 0;
+      border-right: 1px solid var(--border);
+      background: transparent;
+      height: 32px;
+    }
+
+    .btn:last-child { border-right: none; }
+
+    .btn[aria-pressed="true"],
+    .btn.is-active {
+      background: var(--surface-3);
+      color: var(--text);
+    }
+  }
+
+  @include coarse-touch {
+    .btn { min-height: 44px; }
+    .btn--sm { min-height: 44px; padding: 0 var(--sp-4); }
+  }
+}
+
+/* Card primitives (.card, .card__header, .card__title, .card__body, modifiers) */
+@mixin card {
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    min-height: 150px;
+  }
+
+  .card__header {
+    padding: var(--sp-3) var(--sp-4);
+    border-bottom: 1px solid var(--border);
+
+    @include flex-between;
+
+    gap: var(--sp-3);
+  }
+
+  .card__title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-family: var(--font-mono), sans-serif;
+  }
+  .card__body { padding: var(--sp-4); }
+
+  .card--surface-2 { background: var(--surface-2); }
+  .card--ghost { background: transparent; border-color: var(--border); }
+  .card--bg { background: var(--bg-elev); border-color: var(--border-subtle); }
+  .card--pad-none { padding: 0; }
+  .card--pad-sm { padding: var(--sp-3); }
+  .card--pad-md { padding: var(--sp-5); }
+  .card--pad-lg { padding: var(--sp-6); }
+
+  .card--interactive {
+    cursor: pointer;
+    transition: border-color var(--dur-base), transform var(--dur-fast), background var(--dur-base);
+
+    &:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-hover);
+    }
+
+    &:active { transform: translateY(1px); }
+  }
+}
+
+/* Move list (.moves, .moves--list + :deep дочерние из JS) */
+@mixin moves {
+  .moves {
+    font-family: var(--font-mono), sans-serif;
+    font-size: var(--fs-sm);
+    display: grid;
+    grid-template-columns: 28px 1fr 1fr;
+    row-gap: 0;
+  }
+
+  .moves--list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  :deep(.moves__row) { display: contents; }
+
+  :deep(.moves__num) {
+    color: var(--text-faint);
+    padding: 4px 8px;
+    font-size: var(--fs-xs);
+  }
+
+  :deep(.moves__ply) {
+    padding: 4px 8px;
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    color: var(--text);
+    transition: background var(--dur-fast) var(--ease-out);
+
+    &:hover { background: var(--surface-hover); }
+
+    &.is-current {
+      background: var(--surface-3);
+      color: var(--text);
+      font-weight: 600;
+    }
+  }
+}
+
+/* Custom scrollbar utility class (.scroll) */
+@mixin scroll {
+  .scroll { @include scrollbar(6px); }
+}
+/* stylelint-enable declaration-block-single-line-max-declarations */

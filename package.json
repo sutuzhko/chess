@@ -1,0 +1,57 @@
+{
+  "name": "chess",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint src && stylelint \"src/**/*.{scss,vue}\"",
+    "lint:fix": "eslint src --fix && stylelint \"src/**/*.{scss,vue}\" --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "vite build",
+    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist --dotfiles -r git@github.com:sutuzhko/chess.git -b gh-pages",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "storybook": "echo 'Storybook is staged but not installed yet. Run npm i -D @storybook/vue3-vite @storybook/test storybook to enable, then: storybook dev -p 6006' && exit 1",
+    "build-storybook": "echo 'Storybook is staged but not installed yet.' && exit 1",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,vue}": "eslint --fix",
+    "src/**/*.{scss,vue}": "stylelint --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.19.17",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vitest/coverage-v8": "^4.1.8",
+    "@vue/test-utils": "^2.4.10",
+    "eslint": "^10.3.0",
+    "eslint-plugin-vue": "^10.9.0",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.6.0",
+    "happy-dom": "^20.9.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.4.0",
+    "postcss-html": "^1.8.1",
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.99.0",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript": "^5.4.0",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5",
+    "vue-tsc": "^3.2.7"
+  },
+  "dependencies": {
+    "equine": "^1.0.0-alpha.0",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.33",
+    "vue-i18n": "^11.4.2",
+    "vue-router": "^5.0.6"
+  }
+}

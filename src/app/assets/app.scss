@@ -1,0 +1,78 @@
+@use './variables' as v;
+
+/* ============================================================
+   App layout — Chess (DDD + Engine Core)
+
+   Здесь должны жить ТОЛЬКО глобальные стили — те, что нельзя
+   разместить в scoped-style компонента:
+   1. html/body, корневой shell;
+   2. классы, которые навешивает JS вне Vue-дерева
+      (canvas BoardController → .board--shake;
+       NotificationOverlay → .chess-toast*).
+   Всё остальное должно быть в scoped style соответствующего .vue.
+   ============================================================ */
+
+/* Минимальная ширина приложения — ниже выезжает горизонтальный скролл,
+   но контент не «ломается». */
+html,
+body {
+  min-width: #{v.$bp-app-min};
+}
+
+/* ── Shell ── */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ── Board canvas shake (класс навешивается из BoardController.ts на canvas-элемент) ── */
+
+@keyframes board-shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-5px); }
+  40%      { transform: translateX(5px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(3px); }
+}
+
+.board--shake {
+  animation: board-shake 0.32s var(--ease-out);
+}
+
+/* ── Toast (NotificationOverlay вставляет элемент в body вне Vue-дерева) ── */
+.chess-toast {
+  position: fixed;
+  bottom: var(--sp-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--danger);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  box-shadow: var(--shadow-md);
+  z-index: 200;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-out);
+  white-space: nowrap;
+}
+
+.chess-toast__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgb(217 107 107 / 0.15);
+  color: var(--danger);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+}

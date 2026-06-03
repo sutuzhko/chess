@@ -1,0 +1,406 @@
+/* ============================================================
+   Konyom Hodi v3 — Design Tokens
+   Источник: docs/design/v3-source/tokens.css
+   Vibe: Vue.js green accent, clean, professional, dense.
+   ============================================================ */
+
+:root {
+  /* Typography */
+  --font-sans: "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, menlo, consolas, monospace;
+  --fs-2xs: 11px;
+  --fs-xs:  12px;
+  --fs-sm:  13px;
+  --fs-base: 14px;
+  --fs-md:  15px;
+  --fs-lg:  17px;
+  --fs-xl:  20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 32px;
+  --fs-4xl: 44px;
+  --fs-5xl: 56px;
+  --tracking-tight: -0.022em;
+  --tracking-tighter: -0.04em;
+  --tracking-base: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.12em;
+  --lh-tight: 1.15;
+  --lh-snug: 1.3;
+  --lh-base: 1.5;
+
+  /* Spacing scale (4-pt) */
+  --sp-0: 0;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 56px;
+  --sp-10: 72px;
+  --sp-11: 96px;
+
+  /* Radii — LinkedIn-ish */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-2xl: 20px;
+  --r-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.6, 1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 320ms;
+
+  /* Layout */
+  --container-max: 1100px;
+  --nav-height: 56px;
+  --nav-height-mobile: 60px;
+  --side-w: 320px;
+  --board-size: 600px;
+  --advantage-width: 16.5px;
+  --header-button-height: 36px;
+
+  /* Brand — Vue.js green (single source of truth) */
+  --brand-50:  #e6f6ee;
+  --brand-100: #c2ead4;
+  --brand-200: #8edbb3;
+  --brand-300: #57c89a;
+  --brand-400: #42b883;  /* Vue brand */
+  --brand-500: #36a874;
+  --brand-600: #2c8a5f;
+  --brand-700: #226d4b;
+  --brand-800: #194f37;
+  --brand-900: #103324;
+
+  /* Secondary (Vue dark slate) */
+  --slate-500: #35495e;
+  --slate-600: #2c3e50;
+  --slate-700: #1f2d3d;
+}
+
+/* ===================== LIGHT (default) ===================== */
+:root,
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg:           #fff;
+  --bg-elev:      #fff;
+  --surface:      #fff;
+  --surface-2:    #f6f6f7;
+  --surface-3:    #ececef;
+  --surface-sunk: #e5e5e7;
+  --surface-hover: #f9f9fa;
+  --overlay:      rgb(15 20 25 / 0.4);
+
+  /* Borders */
+  --border:        #e2e2e3;
+  --border-strong: #c4c5c8;
+  --border-subtle: #ececef;
+  --divider:       #ececef;
+
+  /* Ink */
+  --text:        #213547;
+  --text-strong: #1a1a1a;
+  --text-muted:  #5d6772;
+  --text-faint:  #8a919c;
+  --text-link:   var(--brand-400);
+  --text-inverse: #fff;
+
+  /* Accent (Vue green) */
+  --accent:       var(--brand-400);
+  --accent-hover: var(--brand-500);
+  --accent-soft:  var(--brand-50);
+  --accent-ink:   var(--brand-700);
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(66 184 131 / 0.18);
+
+  /* Semantic */
+  --success:      #22a06b;
+  --success-soft: #d6f1e2;
+  --warning:      #c48a16;
+  --warning-soft: #fff2cf;
+  --danger:       #d93636;
+  --danger-soft:  #fde3e3;
+  --info:         #2f86c8;
+  --info-soft:    #def0fa;
+
+  /* Board */
+  --board-light:  #edeef0;
+  --board-dark:   #b0b6c0;
+  --board-light-rgb: 237, 238, 240;
+  --board-dark-rgb:  176, 182, 192;
+  --board-last:   rgb(66 184 131 / 0.30);
+  --board-legal:  rgb(33 53 71 / 0.20);
+  --board-check:  rgb(217 54 54 / 0.45);
+  --board-select: rgb(66 184 131 / 0.42);
+
+  /* Eval bar */
+  --eval-black:      #1f2125;
+  --eval-white:      #f0f1f3;
+  --eval-black-text: #f0f1f3;
+  --eval-white-text: #1f2125;
+
+  /* Clock */
+  --clock-bg:          #1a1a1a;
+  --clock-text:        #fff;
+  --clock-active-bg:   var(--brand-400);
+  --clock-active-text: #fff;
+  --clock-low-bg:      #fde3e3;
+  --clock-low-text:    #b41f1f;
+
+  /* Slider — unfilled track (filled side uses --accent) */
+  --slider-track: #c4c5c8;
+
+  /* Shadows — whisper-light, Vue-style */
+  --shadow-xs: 0 1px 2px rgb(15 20 25 / 0.04);
+  --shadow-sm: 0 1px 3px rgb(15 20 25 / 0.06), 0 1px 2px rgb(15 20 25 / 0.03);
+  --shadow-md: 0 4px 12px rgb(15 20 25 / 0.06), 0 1px 3px rgb(15 20 25 / 0.03);
+  --shadow-lg: 0 12px 32px rgb(15 20 25 / 0.08), 0 4px 8px rgb(15 20 25 / 0.04);
+  --shadow-xl: 0 24px 48px rgb(15 20 25 / 0.12), 0 8px 16px rgb(15 20 25 / 0.05);
+  --shadow-focus: 0 0 0 3px var(--accent-glow);
+  --shadow-inset: inset 0 1px 0 rgb(255 255 255 / 0.6);
+  --grad-hero: linear-gradient(135deg, var(--brand-400) 0%, var(--slate-500) 100%);
+}
+
+/* ======================= DARK ======================= */
+[data-theme="dark"] {
+  --bg:           #1a1a1a;
+  --bg-elev:      #1b1b1f;
+  --surface:      #222226;
+  --surface-2:    #2a2a30;
+  --surface-3:    #34343c;
+  --surface-sunk: #131316;
+  --surface-hover: #2c2c32;
+  --overlay:      rgb(0 0 0 / 0.6);
+  --border:        #2e2e34;
+  --border-strong: #44444c;
+  --border-subtle: #232328;
+  --divider:       #292930;
+  --text:        #e6e6e8;
+  --text-strong: #fff;
+  --text-muted:  #a0a0a8;
+  --text-faint:  #6a6a72;
+  --text-link:   #5fd49a;
+  --text-inverse: #1a1a1a;
+  --accent:       #5fd49a;
+  --accent-hover: #7ee0ae;
+  --accent-soft:  rgb(95 212 154 / 0.12);
+  --accent-ink:   #a8eccc;
+  --accent-fg:    #0a2418;
+  --accent-glow:  rgb(95 212 154 / 0.22);
+  --success:      #5fd49a;
+  --success-soft: rgb(95 212 154 / 0.14);
+  --warning:      #e3b34a;
+  --warning-soft: rgb(227 179 74 / 0.14);
+  --danger:       #ff6b6b;
+  --danger-soft:  rgb(255 107 107 / 0.14);
+  --info:         #5cb8ff;
+  --info-soft:    rgb(92 184 255 / 0.14);
+  --board-light:  #d6dae0;
+  --board-dark:   #4f5a6a;
+  --board-light-rgb: 214, 218, 224;
+  --board-dark-rgb:  79, 90, 106;
+  --board-last:   rgb(95 212 154 / 0.32);
+  --board-legal:  rgb(15 20 25 / 0.32);
+  --board-check:  rgb(255 107 107 / 0.50);
+  --board-select: rgb(95 212 154 / 0.50);
+  --eval-black:      #0d0e10;
+  --eval-white:      #d8dbe0;
+  --eval-black-text: #d8dbe0;
+  --eval-white-text: #0d0e10;
+  --clock-bg:          #0a0a0a;
+  --clock-text:        #e6e6e8;
+  --clock-active-bg:   #5fd49a;
+  --clock-active-text: #0a2418;
+  --clock-low-bg:      #2a0f10;
+  --clock-low-text:    #ff8585;
+  --slider-track: #2a2d32;
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.5), 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.45), 0 1px 3px rgb(0 0 0 / 0.25);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55), 0 4px 8px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 24px 48px rgb(0 0 0 / 0.65), 0 8px 16px rgb(0 0 0 / 0.4);
+  --shadow-focus: 0 0 0 3px var(--accent-glow);
+  --shadow-inset: inset 0 1px 0 rgb(255 255 255 / 0.04);
+  --grad-hero: linear-gradient(135deg, #42b883 0%, #35495e 100%);
+}
+
+/* =====================================================================
+   Accent palettes — overrides for --accent / --accent-hover / --accent-soft
+   / --accent-ink / --accent-fg / --accent-glow.
+   Default (when no [data-accent] set) — Vue green from :root/light block.
+   Selected via <html data-accent="silver|gold|green|blue|copper|purple">.
+   ===================================================================== */
+[data-accent="silver"] {
+  --accent:       #8a91a0;
+  --accent-hover: #748094;
+  --accent-soft:  rgb(138 145 160 / 0.12);
+  --accent-ink:   #2c3340;
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(138 145 160 / 0.22);
+}
+
+[data-accent="gold"] {
+  --accent:       #c9a44d;
+  --accent-hover: #b18a35;
+  --accent-soft:  rgb(201 164 77 / 0.14);
+  --accent-ink:   #5e4815;
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(201 164 77 / 0.22);
+}
+
+/* [data-accent="green"] inherits from :root (light) and [data-theme="dark"] —
+   no override block needed; declaring one would force light-mode values
+   onto the dark theme. */
+
+[data-accent="blue"] {
+  --accent:       #2f86c8;
+  --accent-hover: #2169a3;
+  --accent-soft:  rgb(47 134 200 / 0.14);
+  --accent-ink:   #143955;
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(47 134 200 / 0.22);
+}
+
+[data-accent="copper"] {
+  --accent:       #b06a3a;
+  --accent-hover: #8f5128;
+  --accent-soft:  rgb(176 106 58 / 0.14);
+  --accent-ink:   #4b2812;
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(176 106 58 / 0.22);
+}
+
+[data-accent="purple"] {
+  --accent:       #8b5cf6;
+  --accent-hover: #7340e6;
+  --accent-soft:  rgb(139 92 246 / 0.14);
+  --accent-ink:   #3c1d80;
+  --accent-fg:    #fff;
+  --accent-glow:  rgb(139 92 246 / 0.22);
+}
+
+/* =====================================================================
+   Board palettes — overrides for --board-light / --board-dark
+   (+ rgb-companions, для канвасных слоёв с переменной альфой).
+   Overlay-цвета (last/legal/check/select) наследуются от темы/акцента —
+   так одна тема + смена палитры доски даёт согласованный «accent-highlight».
+   Selected via <html data-board="wood|green|blue|walnut|mono|lavender|purple|ice">.
+   ===================================================================== */
+[data-board="wood"] {
+  --board-light:     #f0d9b5;
+  --board-dark:      #b58863;
+  --board-light-rgb: 240, 217, 181;
+  --board-dark-rgb:  181, 136, 99;
+}
+
+[data-board="green"] {
+  --board-light:     #eeeed2;
+  --board-dark:      #769656;
+  --board-light-rgb: 238, 238, 210;
+  --board-dark-rgb:  118, 150, 86;
+}
+
+[data-board="blue"] {
+  --board-light:     #dee3e6;
+  --board-dark:      #8ca2ad;
+  --board-light-rgb: 222, 227, 230;
+  --board-dark-rgb:  140, 162, 173;
+}
+
+[data-board="walnut"] {
+  --board-light:     #d2b48c;
+  --board-dark:      #6f4e37;
+  --board-light-rgb: 210, 180, 140;
+  --board-dark-rgb:  111, 78, 55;
+}
+
+[data-board="mono"] {
+  --board-light:     #ededed;
+  --board-dark:      #707070;
+  --board-light-rgb: 237, 237, 237;
+  --board-dark-rgb:  112, 112, 112;
+}
+
+[data-board="lavender"] {
+  --board-light:     #e6e0f0;
+  --board-dark:      #9b8bb7;
+  --board-light-rgb: 230, 224, 240;
+  --board-dark-rgb:  155, 139, 183;
+}
+
+[data-board="purple"] {
+  --board-light:     #ddd3e8;
+  --board-dark:      #7f5fa3;
+  --board-light-rgb: 221, 211, 232;
+  --board-dark-rgb:  127, 95, 163;
+}
+
+[data-board="ice"] {
+  --board-light:     #e8f0f4;
+  --board-dark:      #7a98b0;
+  --board-light-rgb: 232, 240, 244;
+  --board-dark-rgb:  122, 152, 176;
+}
+
+/* Reduced motion */
+/* stylelint-disable declaration-no-important */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* stylelint-enable declaration-no-important */
+
+/* ── Resets / base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01", "tnum";
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-glow);
+  color: var(--text);
+}
+
+/* ── Type utilities ── */
+.t-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum", "zero";
+}
+
+.t-muted { color: var(--text-muted); }
+.t-faint { color: var(--text-faint); }

@@ -1,0 +1,362 @@
+{
+  "app": {
+    "name": "Movida del Caballo",
+    "error": {
+      "eyebrow": "Error",
+      "title": "Algo salió mal",
+      "retry": "Intentar de nuevo"
+    },
+    "deferred": {
+      "badge": "PRONTO"
+    }
+  },
+  "common": {
+    "back": "Atrás"
+  },
+  "oauth": {
+    "callback": {
+      "exchanging": "Finalizando el inicio de sesión en Lichess…",
+      "errorTitle": "Error al iniciar sesión",
+      "userDenied": "Has cancelado el inicio de sesión en Lichess.",
+      "missingCode": "Lichess no devolvió un código de autorización.",
+      "backToSettings": "Volver a ajustes"
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "game": "Juego",
+    "openings": "Aperturas",
+    "puzzles": "Problemas",
+    "settings": "Ajustes",
+    "language": "Idioma",
+    "theme": "Tema"
+  },
+  "openings": {
+    "advice": "Haz una jugada — o elige una línea a la derecha",
+    "title": "Aperturas",
+    "subtitle": "{count} aperturas principales",
+    "startPosition": "Posición inicial",
+    "bookmark": "Al repertorio",
+    "inRepertoire": "En el repertorio",
+    "repertoireSection": "En el repertorio",
+    "repertoireRemove": "Quitar del repertorio",
+    "train": "Entrenar",
+    "mainLine": "línea principal",
+    "back": "Atrás",
+    "forward": "Adelante",
+    "flip": "Girar",
+    "toMove": "juegan {side}",
+    "sideWhite": "blancas",
+    "sideBlack": "negras",
+    "responsesWhite": "Jugadas de blancas",
+    "responsesBlack": "Respuestas de negras",
+    "endOfLine": "Fin de la línea — no hay más jugadas",
+    "loading": "Cargando jugadas…",
+    "statsTooltip": "Blancas {white}% / tablas {draw}% / negras {black}% · {games} partidas",
+    "searchPlaceholder": "Buscar apertura o ECO…",
+    "searchEmpty": "Nada encontrado",
+    "gamesTotal": "{count} partidas",
+    "viewWhite": "Blancas",
+    "viewBlack": "Negras",
+    "positionTotal": "Resumen de la posición",
+    "noStats": "Sin datos para esta posición",
+    "sortLabel": "Orden",
+    "sortPopular": "Popularidad",
+    "sortWinrate": "% de victorias",
+    "sortRating": "Elo",
+    "avgRating": "Ø {rating}",
+    "minGames": "≥ {count} partidas",
+    "movesCount": "{count} jugadas",
+    "catalogOpen": "Catálogo de aperturas",
+    "catalogSearch": "Buscar apertura — nombre o código ECO",
+    "catalogAll": "Todas",
+    "catalogCount": "{shown} de {total}",
+    "catalogClose": "Cerrar",
+    "catalogGroup": "Grupo {group}",
+    "catalogMore": "Mostrando las primeras {count} — afina la búsqueda"
+  },
+  "settings": {
+    "eyebrow": "AJUSTES · APP",
+    "title": "Ajustes",
+    "subtitle": "Apariencia, juego, datos",
+    "common": {
+      "soon": "pronto"
+    },
+    "tabs": {
+      "appearance": "Apariencia",
+      "gameplay": "Juego",
+      "ui": "Interfaz",
+      "data": "Datos",
+      "language": "Idioma"
+    },
+    "appearance": {
+      "theme": "Tema",
+      "accent": "Color de acento",
+      "board": "Paleta del tablero",
+      "pieceSet": "Conjunto de piezas",
+      "density": "Densidad de la interfaz"
+    },
+    "gameplay": {
+      "rulesAndHints": "Reglas y consejos"
+    },
+    "ui": {
+      "standard": "Modo estándar",
+      "shvedki": "Modo «Bughouse»"
+    },
+    "data": {
+      "storageSize": "Tamaño del almacenamiento",
+      "backup": "Copia de seguridad",
+      "exportJson": "Exportar JSON",
+      "importJson": "Importar JSON",
+      "clearSection": "Borrar",
+      "clearBtn": "Borrar datos locales",
+      "clearWarning": "Elimina todas las partidas, ajustes y reservas. Es irreversible.",
+      "exportSaved": "Exportación guardada",
+      "importDone": "Importación lista. Recarga la página",
+      "storageCleared": "Almacenamiento borrado. Recarga la página",
+      "confirmClear": "¿Borrar todos los datos locales?",
+      "errorPrefix": "Error: ",
+      "bytes": "B",
+      "kilobytes": "KB",
+      "megabytes": "MB",
+      "outOf": "de",
+      "lichess": {
+        "section": "Base de aperturas de Lichess",
+        "toggleLabel": "Usar base de maestros de Lichess",
+        "toggleDescription": "Cuando está activado y has iniciado sesión en Lichess, cada posición se completa con datos de su opening explorer. Sin autorización o con el interruptor apagado se usa solo la base local.",
+        "loginCta": "Iniciar sesión con Lichess",
+        "loginHint": "Pulsa para abrir la página de autorización de Lichess. Volverás aquí tras dar tu consentimiento.",
+        "logout": "Cerrar sesión",
+        "connectedAs": "Conectado como",
+        "anonymous": "(cuenta)",
+        "expired": "La sesión de Lichess ha expirado",
+        "expiredCta": "Iniciar sesión de nuevo",
+        "localOnly": "Por ahora se usa solo la base local. Activa el interruptor para conectar Lichess."
+      }
+    },
+    "language": {
+      "title": "Idioma de la interfaz"
+    }
+  },
+  "lobby": {
+    "title": "Configuración",
+    "lead": "Elige oponente, control de tiempo y lado.",
+    "cancel": "Cancelar",
+    "start": "Iniciar partida",
+    "opponent": {
+      "title": "Oponente",
+      "soon": "Próximamente",
+      "ai": { "title": "Contra IA", "desc": "Motor con ajuste de fuerza" },
+      "hotseat": { "title": "Hotseat", "desc": "Dos jugadores, un dispositivo" },
+      "remote": { "title": "Remoto", "desc": "Juego en línea" }
+    },
+    "ai": {
+      "engine": "Motor",
+      "level": "Nivel {n}"
+    },
+    "side": {
+      "title": "Lado",
+      "white": "Blancas",
+      "random": "Aleatorio",
+      "black": "Negras"
+    },
+    "time": {
+      "title": "Control de tiempo"
+    },
+    "fen": {
+      "title": "Posición inicial (FEN)",
+      "placeholder": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "invalid": "Posición FEN no válida"
+    }
+  },
+  "home": {
+    "eyebrow": "Konyom Khodi · Ajedrez. Resuelve. Juega.",
+    "title": "¿A dónde hoy?",
+    "subtitle": "Juega contra el motor, resuelve táctica o empieza una partida con un amigo por enlace.",
+    "resume": {
+      "live": "En vivo",
+      "title": "Continuar partida",
+      "autosave": "Autoguardado",
+      "justNow": "Ahora mismo",
+      "minutesAgo": "hace {n} min"
+    },
+    "modes": {
+      "popular": "POPULAR",
+      "standard": { "title": "Estándar", "desc": "Ajedrez clásico · contra motor o amigo" },
+      "shvedki": { "title": "Bughouse", "desc": "Dos tableros · piezas de reserva" },
+      "puzzles": { "title": "Problemas", "desc": "Entrenador · encuentra la mejor jugada" },
+      "online": { "title": "En línea", "desc": "Buscar oponente en la red" },
+      "openings": { "title": "Aperturas", "desc": "Árbol de variantes · ECO A00–E99" },
+      "analysis": { "title": "Análisis", "desc": "Top-4 jugadas con explicación" }
+    },
+    "stats": {
+      "played": "Jugadas",
+      "solved": "Problemas resueltos",
+      "rating": "Puntuación",
+      "streak": "Racha"
+    },
+    "recentGames": {
+      "moves": "{n} jugadas",
+      "open": "Abrir",
+      "result": {
+        "win": "Victoria",
+        "loss": "Derrota",
+        "draw": "Tablas",
+        "whiteWins": "Ganan las blancas",
+        "blackWins": "Ganan las negras"
+      },
+      "opponent": {
+        "aiName": "ИИ",
+        "aiLevel": "{name} · niv. {level}",
+        "hotseat": "Hotseat",
+        "team": "Equipo 2"
+      },
+      "relative": {
+        "justNow": "ahora mismo",
+        "minutesAgo": "hace {n} min",
+        "hoursAgo": "hace {n} h",
+        "yesterday": "ayer",
+        "daysAgo": "hace {n} días",
+        "unknown": "—"
+      }
+    },
+    "bottom": {
+      "recent": {
+        "title": "Partidas recientes",
+        "sub": "Tu historial de partidas",
+        "subCount": "{shown} de {total} · ver todo",
+        "history": "Historial",
+        "empty": {
+          "title": "Aún vacío",
+          "desc": "Juega tu primera partida — aparecerá aquí."
+        }
+      },
+      "daily": {
+        "title": "Problema del día",
+        "sub": "Un problema aleatorio sin resolver",
+        "mateInN": "Mate en {n}",
+        "bestMove": "Encuentra la mejor jugada",
+        "eloShort": "ELO {n}",
+        "sideWhite": "Juegan blancas",
+        "sideBlack": "Juegan negras",
+        "solve": "Resolver",
+        "streakBadge": "RACHA +{n}",
+        "empty": {
+          "title": "Cargando problema",
+          "desc": "Pronto aparecerá aquí el problema táctico del día."
+        }
+      }
+    }
+  },
+  "game": {
+    "modes": {
+      "standard": "Estándar",
+      "shvedki": "Bughouse",
+      "openingTraining": "Entrenamiento de apertura",
+      "standardFromPosition": "Estándar · desde posición"
+    },
+    "eval": {
+      "label": "Barra de evaluación de la posición"
+    },
+    "captured": {
+      "label": "Lista de piezas capturadas"
+    },
+    "sidebar": {
+      "moves": "Jugadas",
+      "flip": "⇅ Voltear",
+      "newGame": "+ Nueva",
+      "resign": "Rendirse",
+      "offerDraw": "Tablas",
+      "setupTitle": "Configuración",
+      "mode": "Modo",
+      "timeControl": "Control de tiempo",
+      "ai": "IA",
+      "aiOff": "Apagado (Hotseat)",
+      "aiPlays": "Juega {side} · niv. {level}",
+      "sideWhite": "blancas",
+      "sideBlack": "negras",
+      "devOverlay": "Dev overlay"
+    },
+    "promotion": {
+      "title": "Promoción de peón",
+      "subtitle": "Elige una pieza",
+      "queen": "Dama",
+      "rook": "Torre",
+      "bishop": "Alfil",
+      "knight": "Caballo"
+    },
+    "gameOver": {
+      "title": "Fin del juego",
+      "newGame": "Nueva partida",
+      "dismiss": "Cerrar"
+    },
+    "boardA": {
+      "movesTitle": "Jugadas · Tablero A"
+    },
+    "boardB": {
+      "movesTitle": "Jugadas · Tablero B"
+    },
+    "team": {
+      "team1Black": "Equipo 1 · Blancas · A",
+      "team2Black": "Equipo 2 · Negras · A",
+      "team2White": "Equipo 2 · Blancas · B",
+      "team1Black2": "Equipo 1 · Negras · B"
+    },
+    "color": {
+      "white": "Blancas",
+      "black": "Negras"
+    },
+    "status": {
+      "whiteToMove": "Mueven blancas",
+      "blackToMove": "Mueven negras",
+      "check": "· ¡Jaque!",
+      "aiThinking": "· IA pensando…",
+      "noAnalysis": "Sin análisis",
+      "matedSide": "Mate · ganaron {side}",
+      "stalemateDraw": "Ahogado · Tablas",
+      "draw50": "Tablas · regla 50 movimientos",
+      "drawMaterial": "Tablas · material insuficiente",
+      "drawRepetition": "Tablas · triple repetición",
+      "timeForfeit": "Tiempo · ganaron {side}"
+    },
+    "result": {
+      "wonTitle": "¡{side} ganaron!",
+      "resignTitle": "{side} se rindieron",
+      "drawTitle": "Tablas",
+      "checkmate": "Jaque mate.",
+      "stalemate": "Ahogado.",
+      "draw50": "Regla de 50 movimientos.",
+      "drawMaterial": "Material insuficiente.",
+      "drawRepetition": "Triple repetición.",
+      "agreedDraw": "Tablas por acuerdo.",
+      "resignation": "Abandonó.",
+      "timeForfeit": "Tiempo agotado."
+    },
+    "toast": {
+      "saved": "Guardado",
+      "saveNotFound": "Guardado no encontrado",
+      "pgnImported": "PGN importado",
+      "fenCopied": "FEN copiado",
+      "fenInvalid": "FEN inválido",
+      "pgnImportFailed": "No se pudo importar el PGN",
+      "check": "¡Jaque!",
+      "illegalDrop": "Ilegal: {reason}",
+      "saveCorrupted": "Guardado dañado — partida nueva iniciada",
+      "loaded": "Cargado",
+      "fenApplied": "FEN aplicado",
+      "error": "Error: {message}",
+      "fenInvalidReason": "FEN inválido: {reason}"
+    },
+    "shvedki": {
+      "mateOnBoard": "¡Mate en tablero {moved}! Equipo {team} tiene el último movimiento en tablero {other}",
+      "playingStatus": "Tablero A: {a} · Tablero B: {b}",
+      "team1Won": "¡Equipo 1 ganó!",
+      "team2Won": "¡Equipo 2 ganó!",
+      "drawTitle": "Empate",
+      "reasonMate": "Jaque mate.",
+      "reasonResign": "El equipo {team} se rindió.",
+      "reasonTime": "Se acabó el tiempo del equipo {team}.",
+      "reasonDraw": "La partida terminó en empate."
+    }
+  }
+}

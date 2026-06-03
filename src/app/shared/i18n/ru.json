@@ -1,0 +1,361 @@
+{
+  "app": {
+    "name": "Конём ходи",
+    "error": {
+      "eyebrow": "Ошибка",
+      "title": "Что-то пошло не так",
+      "retry": "Попробовать снова"
+    },
+    "deferred": {
+      "badge": "СКОРО"
+    }
+  },
+  "common": {
+    "back": "Назад"
+  },
+  "oauth": {
+    "callback": {
+      "exchanging": "Завершаем вход через Lichess…",
+      "errorTitle": "Не удалось войти",
+      "userDenied": "Вы отменили вход на стороне Lichess.",
+      "missingCode": "Lichess не вернул код авторизации.",
+      "backToSettings": "Вернуться в настройки"
+    }
+  },
+  "nav": {
+    "home": "Главная",
+    "game": "Игра",
+    "openings": "Дебюты",
+    "puzzles": "Задачи",
+    "settings": "Настройки",
+    "language": "Язык",
+    "theme": "Тема"
+  },
+  "openings": {
+    "advice": "Сделайте или выберите ход",
+    "title": "Дебюты",
+    "subtitle": "{count} основных дебютов",
+    "startPosition": "Начальная позиция",
+    "bookmark": "В репертуар",
+    "inRepertoire": "В репертуаре",
+    "repertoireSection": "В репертуаре",
+    "repertoireRemove": "Убрать из репертуара",
+    "train": "Тренировать",
+    "mainLine": "основная линия",
+    "back": "Назад",
+    "forward": "Вперёд",
+    "flip": "Перевернуть",
+    "toMove": "ход {side}",
+    "sideWhite": "белых",
+    "sideBlack": "чёрных",
+    "responsesWhite": "Ответы белых",
+    "responsesBlack": "Ответы чёрных",
+    "endOfLine": "Конец линии — в книге больше нет ходов",
+    "loading": "Загрузка ходов…",
+    "statsTooltip": "Белые {white}% / ничья {draw}% / чёрные {black}% · {games} партий",
+    "searchPlaceholder": "Поиск дебюта или ECO…",
+    "searchEmpty": "Ничего не найдено",
+    "gamesTotal": "{count} партий",
+    "viewWhite": "Белые",
+    "viewBlack": "Чёрные",
+    "positionTotal": "Итог по позиции",
+    "noStats": "Нет данных по позиции",
+    "sortLabel": "Сортировка",
+    "sortPopular": "Популярность",
+    "sortWinrate": "Винрейт",
+    "sortRating": "Рейтинг",
+    "avgRating": "Ø {rating}",
+    "minGames": "≥ {count} партий",
+    "movesCount": "{count} ходов",
+    "catalogOpen": "Каталог дебютов",
+    "catalogSearch": "Найти дебют — название или ECO-код",
+    "catalogAll": "Все",
+    "catalogCount": "{shown} из {total}",
+    "catalogClose": "Закрыть",
+    "catalogGroup": "Группа {group}",
+    "catalogMore": "Показаны первые {count} — уточните поиск"
+  },
+  "settings": {
+    "eyebrow": "НАСТРОЙКИ · ПРИЛОЖЕНИЕ",
+    "title": "Настройки",
+    "subtitle": "Внешний вид, игра, данные",
+    "common": {
+      "soon": "скоро"
+    },
+    "tabs": {
+      "appearance": "Внешний вид",
+      "gameplay": "Игра",
+      "ui": "Интерфейс",
+      "data": "Данные",
+      "language": "Язык"
+    },
+    "appearance": {
+      "theme": "Тема",
+      "accent": "Акцентный цвет",
+      "board": "Палитра доски",
+      "pieceSet": "Набор фигур",
+      "density": "Плотность интерфейса"
+    },
+    "gameplay": {
+      "rulesAndHints": "Правила и подсказки"
+    },
+    "ui": {
+      "standard": "Стандартный режим",
+      "shvedki": "Режим «Шведки»"
+    },
+    "data": {
+      "storageSize": "Размер хранилища",
+      "backup": "Резервная копия",
+      "exportJson": "Экспорт JSON",
+      "importJson": "Импорт JSON",
+      "clearSection": "Очистка",
+      "clearBtn": "Очистить локальные данные",
+      "clearWarning": "Удалит все партии, настройки и резервы. Действие необратимо.",
+      "exportSaved": "Экспорт сохранён",
+      "importDone": "Импорт завершён. Перезагрузите страницу",
+      "storageCleared": "Хранилище очищено. Перезагрузите страницу",
+      "confirmClear": "Удалить все локальные данные?",
+      "errorPrefix": "Ошибка: ",
+      "bytes": "Б",
+      "kilobytes": "КБ",
+      "megabytes": "МБ",
+      "outOf": "из",
+      "lichess": {
+        "section": "База дебютов Lichess",
+        "toggleLabel": "Использовать базу мастеров Lichess",
+        "toggleDescription": "Когда включено и выполнен вход через Lichess — каждая позиция дополняется данными из их opening explorer. Без авторизации или при выключенном свитче используется только локальная книга.",
+        "loginCta": "Войти через Lichess",
+        "loginHint": "Нажмите, чтобы открыть страницу авторизации Lichess. После согласия вы вернётесь обратно в настройки.",
+        "logout": "Выйти",
+        "connectedAs": "Подключено как",
+        "anonymous": "(аккаунт)",
+        "expired": "Сессия Lichess истекла",
+        "expiredCta": "Войти снова",
+        "localOnly": "Сейчас используется только локальная база. Включите свитч выше, чтобы подключить Lichess."
+      }
+    },
+    "language": {
+      "title": "Язык интерфейса"
+    }
+  },
+  "lobby": {
+    "title": "Настройка партии",
+    "lead": "Выбери соперника, контроль времени и сторону.",
+    "cancel": "Отмена",
+    "start": "Начать партию",
+    "opponent": {
+      "title": "Соперник",
+      "soon": "Скоро",
+      "ai": { "title": "Против ИИ", "desc": "Движок с настройкой силы" },
+      "hotseat": { "title": "Hotseat", "desc": "Двое за одним устройством" },
+      "remote": { "title": "Удалённо", "desc": "Онлайн-игра" }
+    },
+    "ai": {
+      "engine": "Движок",
+      "level": "Уровень {n}"
+    },
+    "side": {
+      "title": "Сторона",
+      "white": "Белые",
+      "random": "Случайно",
+      "black": "Чёрные"
+    },
+    "time": {
+      "title": "Контроль времени"
+    },
+    "fen": {
+      "title": "Стартовая позиция (FEN)",
+      "placeholder": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "invalid": "Некорректная FEN-позиция"
+    }
+  },
+  "home": {
+    "eyebrow": "Ходи. Решай. Играй.",
+    "title": "Куда сегодня?",
+    "subtitle": "Играй с ИИ или другом, решай задачи, изучай дебюты.",
+    "resume": {
+      "live": "В эфире",
+      "title": "Продолжить партию",
+      "autosave": "Автосохранение",
+      "justNow": "Только что",
+      "minutesAgo": "{n} мин назад"
+    },
+    "modes": {
+      "popular": "ПОПУЛЯРНО",
+      "standard": { "title": "Стандарт", "desc": "Классические шахматы · с движком или другом" },
+      "shvedki": { "title": "Шведки", "desc": "Две доски · резерв фигур" },
+      "puzzles": { "title": "Задачи", "desc": "Тренажёр · найди лучший ход" },
+      "online": { "title": "Онлайн", "desc": "Найти соперника по сети" },
+      "openings": { "title": "Дебюты", "desc": "Дерево вариантов · ECO A00–E99" },
+      "analysis": { "title": "Анализ", "desc": "Топ-4 хода с объяснением" }
+    },
+    "stats": {
+      "played": "Сыграно",
+      "solved": "Решено задач",
+      "rating": "Рейтинг",
+      "streak": "Серия"
+    },
+    "recentGames": {
+      "moves": "{n} ходов",
+      "open": "Открыть",
+      "result": {
+        "win": "Победа",
+        "loss": "Поражение",
+        "draw": "Ничья",
+        "whiteWins": "Победа белых",
+        "blackWins": "Победа чёрных"
+      },
+      "opponent": {
+        "aiName": "ИИ",
+        "aiLevel": "{name} · ур. {level}",
+        "hotseat": "Hotseat",
+        "team": "Команда 2"
+      },
+      "relative": {
+        "justNow": "только что",
+        "minutesAgo": "{n} мин назад",
+        "hoursAgo": "{n} ч назад",
+        "yesterday": "вчера",
+        "daysAgo": "{n} дн назад",
+        "unknown": "—"
+      }
+    },
+    "bottom": {
+      "recent": {
+        "title": "Недавние партии",
+        "sub": "История сыгранных партий",
+        "subCount": "{shown} из {total} · показать все",
+        "history": "История",
+        "empty": {
+          "title": "Пока пусто",
+          "desc": "Сыграй первую партию — она появится здесь."
+        }
+      },
+      "daily": {
+        "title": "Сегодняшняя задача",
+        "sub": "Случайная задача дня",
+        "mateInN": "Мат в {n}",
+        "bestMove": "Найти лучший ход",
+        "eloShort": "ELO {n}",
+        "sideWhite": "Ход белых",
+        "sideBlack": "Ход чёрных",
+        "solve": "Решать",
+        "streakBadge": "СЕРИЯ +{n}",
+        "empty": {
+          "title": "Задача загружается",
+          "desc": "Скоро здесь появится тактическая задача дня."
+        }
+      }
+    }
+  },
+  "game": {
+    "modes": {
+      "standard": "Стандарт",
+      "shvedki": "Шведки",
+      "openingTraining": "Тренировка дебюта",
+      "standardFromPosition": "Стандарт · из позиции"
+    },
+    "eval": {
+      "label": "Визуализация позиции сил на доске"
+    },
+    "captured": {
+      "label": "Список съеденных фигур"
+    },
+    "sidebar": {
+      "moves": "Ходы",
+      "flip": "⇅ Перевернуть",
+      "newGame": "+ Новая",
+      "resign": "Сдаться",
+      "offerDraw": "Ничья",
+      "setupTitle": "Настройки партии",
+      "mode": "Режим",
+      "timeControl": "Контроль времени",
+      "ai": "ИИ",
+      "aiOff": "Выкл (Hotseat)",
+      "aiPlays": "Играет {side} · ур. {level}",
+      "sideWhite": "белыми",
+      "sideBlack": "чёрными",
+      "devOverlay": "Dev overlay"
+    },
+    "promotion": {
+      "title": "Превращение пешки",
+      "subtitle": "Выберите фигуру",
+      "queen": "Ферзь",
+      "rook": "Ладья",
+      "bishop": "Слон",
+      "knight": "Конь"
+    },
+    "gameOver": {
+      "title": "Конец игры",
+      "newGame": "Новая партия",
+      "dismiss": "Закрыть"
+    },
+    "boardA": {
+      "movesTitle": "Ходы · Доска A"
+    },
+    "boardB": {
+      "movesTitle": "Ходы · Доска B"
+    },
+    "team": {
+      "team1Black": "Команда 1 · Белые · A",
+      "team2Black": "Команда 2 · Чёрные · A",
+      "team2White": "Команда 2 · Белые · B",
+      "team1Black2": "Команда 1 · Чёрные · B"
+    },
+    "color": {
+      "white": "Белые",
+      "black": "Чёрные"
+    },
+    "status": {
+      "whiteToMove": "Белые ходят",
+      "blackToMove": "Чёрные ходят",
+      "check": "· Шах!",
+      "aiThinking": "· ИИ думает…",
+      "noAnalysis": "Нет анализа",
+      "matedSide": "Мат · {side} победили",
+      "stalemateDraw": "Пат · Ничья",
+      "draw50": "Ничья · правило 50 ходов",
+      "drawMaterial": "Ничья · недостаточно материала",
+      "drawRepetition": "Ничья · трёхкратное повторение",
+      "timeForfeit": "Время · {side} победили"
+    },
+    "result": {
+      "wonTitle": "{side} победили!",
+      "resignTitle": "{side} сдались.",
+      "drawTitle": "Ничья",
+      "checkmate": "Мат.",
+      "stalemate": "Пат.",
+      "draw50": "Правило 50 ходов.",
+      "drawMaterial": "Недостаточно материала.",
+      "drawRepetition": "Трёхкратное повторение.",
+      "agreedDraw": "Ничья по соглашению.",
+      "timeForfeit": "Время истекло."
+    },
+    "toast": {
+      "saved": "Сохранено",
+      "saveNotFound": "Сохранение не найдено",
+      "pgnImported": "PGN импортирован",
+      "fenCopied": "FEN скопирован",
+      "fenInvalid": "Неверный FEN",
+      "pgnImportFailed": "Не удалось импортировать PGN",
+      "check": "Шах!",
+      "illegalDrop": "Нельзя: {reason}",
+      "saveCorrupted": "Сохранение повреждено — начата новая партия",
+      "loaded": "Загружено",
+      "fenApplied": "FEN применён",
+      "error": "Ошибка: {message}",
+      "fenInvalidReason": "Неверный FEN: {reason}"
+    },
+    "shvedki": {
+      "mateOnBoard": "Мат на доске {moved}! Команда {team} имеет последний ход на доске {other}",
+      "playingStatus": "Доска A: {a} · Доска B: {b}",
+      "team1Won": "Команда 1 победила!",
+      "team2Won": "Команда 2 победила!",
+      "drawTitle": "Ничья",
+      "reasonMate": "Мат.",
+      "reasonResign": "Команда {team} сдалась.",
+      "reasonTime": "Время команды {team} истекло.",
+      "reasonDraw": "Партия завершилась вничью."
+    }
+  }
+}

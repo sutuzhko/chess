@@ -1,0 +1,246 @@
+[
+	{
+		"id": "b-mate-1-001",
+		"fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",
+		"sideToMove": "white",
+		"solution": [
+			"d1d8"
+		],
+		"themes": [
+			"mate-in-1",
+			"endgame",
+			"back-rank"
+		],
+		"elo": 800,
+		"title": "Мат в 1 — задняя горизонталь"
+	},
+	{
+		"id": "b-mate-1-003",
+		"fen": "6k1/R7/6K1/8/8/8/8/8 w - - 0 1",
+		"sideToMove": "white",
+		"solution": [
+			"a7a8"
+		],
+		"themes": [
+			"mate-in-1",
+			"endgame",
+			"rook"
+		],
+		"elo": 700,
+		"title": "Мат ладьёй"
+	},
+	{
+		"id": "b-mate-2-001",
+		"fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 2 3",
+		"sideToMove": "white",
+		"solution": [
+			"f3f7"
+		],
+		"themes": [
+			"mate-in-1",
+			"tactics"
+		],
+		"elo": 1100,
+		"title": "Атака на f7"
+	},
+	{
+		"id": "b-endgame-001",
+		"fen": "7k/8/6K1/4P3/8/8/8/8 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"e5e6",
+				"h8g8",
+				"e6e7",
+				"g8h8",
+				"e7e8q"
+			],
+			[
+				"g6f6",
+				"h8h7",
+				"e5e6",
+				"h7h8",
+				"e6e7",
+				"h8h7",
+				"e7e8q"
+			]
+		],
+		"themes": [
+			"endgame",
+			"pawn",
+			"promotion"
+		],
+		"elo": 1400,
+		"title": "Проводка пешки",
+		"description": "Несколько путей к ферзю — главное, чтобы пешка прошла."
+	},
+	{
+		"id": "c-mozzaxfi-cblk",
+		"fen": "8/8/k1K5/8/8/8/8/2R5 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"c1a1"
+			]
+		],
+		"themes": [
+			"mate-in-1",
+			"endgame"
+		],
+		"elo": 400,
+		"title": "Мат в 1 ход"
+	},
+	{
+		"id": "c-mpqz0pr4-ux4a",
+		"fen": "5B1R/8/7N/8/8/2b5/p1K5/k7 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"h6f5",
+				"c3h8",
+				"f5g7",
+				"h8g7",
+				"f8g7"
+			],
+			[
+				"h6f5",
+				"c3e1",
+				"f8g7",
+				"e1c3",
+				"g7c3"
+			],
+			[
+				"h6f5",
+				"c3b2",
+				"h8h1",
+				"b2c1",
+				"h1c1"
+			]
+		],
+		"themes": [
+			"mate-in-3",
+			"tactics",
+			"endgame"
+		],
+		"elo": 1900,
+		"title": "Белые начинают и ставят мат в 3 хода",
+		"createdAt": "2026-05-29T13:41:49.024Z",
+		"objective": {
+			"kind": "mate",
+			"moves": 3
+		}
+	},
+	{
+		"id": "c-mpr7j2cy-2pt7",
+		"fen": "k2N4/7R/8/4K3/8/8/8/8 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"e5d6",
+				"a8b8",
+				"d8c6",
+				"b8a8",
+				"h7a7"
+			],
+			[
+				"e5d6",
+				"a8b8",
+				"d8c6",
+				"b8c8",
+				"h7c7"
+			]
+		],
+		"themes": [
+			"mate-in-3",
+			"tactics",
+			"endgame"
+		],
+		"elo": 1900,
+		"title": "Белые начинают и ставят мат в 3 хода",
+		"createdAt": "2026-05-29T17:40:02.098Z",
+		"objective": {
+			"kind": "mate",
+			"moves": 3
+		}
+	},
+	{
+		"id": "c-mpr7mwuu-9hhr",
+		"fen": "8/8/5K2/5N2/5k2/5B2/4P3/8 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"f3g2",
+				"f4g4",
+				"e2e3",
+				"g4h5",
+				"g2f3"
+			]
+		],
+		"themes": [
+			"mate-in-3",
+			"endgame",
+			"tactics"
+		],
+		"elo": 1900,
+		"title": "Белые начинают и ставят мат в 3 хода",
+		"createdAt": "2026-05-29T17:43:01.590Z",
+		"objective": {
+			"kind": "mate",
+			"moves": 3
+		}
+	},
+	{
+		"id": "c-mpr8isww-k0od",
+		"fen": "r4rk1/ppq2p1p/1b2nPpQ/3p4/6N1/8/PB3PPP/R4RK1 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"h6g7",
+				"e6g7",
+				"g4h6",
+				"g8h8",
+				"f6g7"
+			]
+		],
+		"themes": [
+			"mate-in-3",
+			"middlegame",
+			"tactics",
+			"sacrifice"
+		],
+		"elo": 1700,
+		"title": "Белые начинают и ставят мат в 3 хода",
+		"createdAt": "2026-05-29T18:07:49.472Z",
+		"objective": {
+			"kind": "mate",
+			"moves": 3
+		}
+	},
+	{
+		"id": "c-mpr8n6qy-hrhf",
+		"fen": "r1b3kr/ppp1Bp1p/1b6/n2P4/2p3q1/2Q2N2/P4PPP/RN2R1K1 w - - 0 1",
+		"sideToMove": "white",
+		"solutions": [
+			[
+				"c3h8",
+				"g8h8",
+				"e7f6",
+				"h8g8",
+				"e1e8"
+			]
+		],
+		"themes": [
+			"mate-in-3",
+			"tactics",
+			"middlegame",
+			"sacrifice"
+		],
+		"elo": 1700,
+		"createdAt": "2026-05-29T18:11:14.026Z",
+		"title": "Белые начинают и ставят мат в 3 хода",
+		"objective": {
+			"kind": "mate",
+			"moves": 3
+		}
+	}
+]

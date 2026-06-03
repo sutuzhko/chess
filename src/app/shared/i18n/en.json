@@ -1,0 +1,362 @@
+{
+  "app": {
+    "name": "Knight's Move",
+    "error": {
+      "eyebrow": "Error",
+      "title": "Something went wrong",
+      "retry": "Try again"
+    },
+    "deferred": {
+      "badge": "SOON"
+    }
+  },
+  "common": {
+    "back": "Back"
+  },
+  "oauth": {
+    "callback": {
+      "exchanging": "Finishing Lichess sign-in…",
+      "errorTitle": "Sign-in failed",
+      "userDenied": "You cancelled the sign-in on the Lichess side.",
+      "missingCode": "Lichess did not return an authorization code.",
+      "backToSettings": "Back to settings"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "game": "Game",
+    "openings": "Openings",
+    "puzzles": "Puzzles",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "openings": {
+    "advice": "Make a move — or pick a line on the right",
+    "title": "Openings",
+    "subtitle": "{count} main openings",
+    "startPosition": "Starting position",
+    "bookmark": "Add to repertoire",
+    "inRepertoire": "In repertoire",
+    "repertoireSection": "In repertoire",
+    "repertoireRemove": "Remove from repertoire",
+    "train": "Train",
+    "mainLine": "main line",
+    "back": "Back",
+    "forward": "Forward",
+    "flip": "Flip",
+    "toMove": "{side} to move",
+    "sideWhite": "White",
+    "sideBlack": "Black",
+    "responsesWhite": "White moves",
+    "responsesBlack": "Black replies",
+    "endOfLine": "End of line — no more book moves",
+    "loading": "Loading moves…",
+    "statsTooltip": "White {white}% / draw {draw}% / black {black}% · {games} games",
+    "searchPlaceholder": "Search opening or ECO…",
+    "searchEmpty": "Nothing found",
+    "gamesTotal": "{count} games",
+    "viewWhite": "White",
+    "viewBlack": "Black",
+    "positionTotal": "Position summary",
+    "noStats": "No stats for this position",
+    "sortLabel": "Sort",
+    "sortPopular": "Popularity",
+    "sortWinrate": "Win rate",
+    "sortRating": "Rating",
+    "avgRating": "Ø {rating}",
+    "minGames": "≥ {count} games",
+    "movesCount": "{count} moves",
+    "catalogOpen": "Openings catalog",
+    "catalogSearch": "Find an opening — name or ECO code",
+    "catalogAll": "All",
+    "catalogCount": "{shown} of {total}",
+    "catalogClose": "Close",
+    "catalogGroup": "Group {group}",
+    "catalogMore": "Showing first {count} — refine your search"
+  },
+  "settings": {
+    "eyebrow": "SETTINGS · APP",
+    "title": "Settings",
+    "subtitle": "Appearance, gameplay, data",
+    "common": {
+      "soon": "soon"
+    },
+    "tabs": {
+      "appearance": "Appearance",
+      "gameplay": "Gameplay",
+      "ui": "Interface",
+      "data": "Data",
+      "language": "Language"
+    },
+    "appearance": {
+      "theme": "Theme",
+      "accent": "Accent color",
+      "board": "Board palette",
+      "pieceSet": "Piece set",
+      "density": "Interface density"
+    },
+    "gameplay": {
+      "rulesAndHints": "Rules & hints"
+    },
+    "ui": {
+      "standard": "Standard mode",
+      "shvedki": "Bughouse mode"
+    },
+    "data": {
+      "storageSize": "Storage size",
+      "backup": "Backup",
+      "exportJson": "Export JSON",
+      "importJson": "Import JSON",
+      "clearSection": "Clear",
+      "clearBtn": "Clear local data",
+      "clearWarning": "Removes all games, settings, and reserves. This cannot be undone.",
+      "exportSaved": "Export saved",
+      "importDone": "Import done. Reload the page",
+      "storageCleared": "Storage cleared. Reload the page",
+      "confirmClear": "Delete all local data?",
+      "errorPrefix": "Error: ",
+      "bytes": "B",
+      "kilobytes": "KB",
+      "megabytes": "MB",
+      "outOf": "of",
+      "lichess": {
+        "section": "Lichess opening database",
+        "toggleLabel": "Use Lichess masters database",
+        "toggleDescription": "When enabled and signed in via Lichess, every position is enriched with their opening explorer data. Without auth or when the toggle is off, only the local book is used.",
+        "loginCta": "Sign in with Lichess",
+        "loginHint": "Click to open Lichess authorization. You will return here after consent.",
+        "logout": "Sign out",
+        "connectedAs": "Connected as",
+        "anonymous": "(account)",
+        "expired": "Lichess session expired",
+        "expiredCta": "Sign in again",
+        "localOnly": "Currently only the local database is used. Toggle the switch above to connect Lichess."
+      }
+    },
+    "language": {
+      "title": "Interface language"
+    }
+  },
+  "lobby": {
+    "title": "Match setup",
+    "lead": "Pick your opponent, time control and side.",
+    "cancel": "Cancel",
+    "start": "Start game",
+    "opponent": {
+      "title": "Opponent",
+      "soon": "Soon",
+      "ai": { "title": "Vs AI", "desc": "Engine with strength settings" },
+      "hotseat": { "title": "Hotseat", "desc": "Two players, one device" },
+      "remote": { "title": "Remote", "desc": "Online game" }
+    },
+    "ai": {
+      "engine": "Engine",
+      "level": "Level {n}"
+    },
+    "side": {
+      "title": "Side",
+      "white": "White",
+      "random": "Random",
+      "black": "Black"
+    },
+    "time": {
+      "title": "Time control"
+    },
+    "fen": {
+      "title": "Start position (FEN)",
+      "placeholder": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "invalid": "Invalid FEN position"
+    }
+  },
+  "home": {
+    "eyebrow": "Knight's Move · Chess. Solve. Play.",
+    "title": "Where today?",
+    "subtitle": "Play the engine, solve tactics or start a game with a friend via link.",
+    "resume": {
+      "live": "Live",
+      "title": "Resume game",
+      "autosave": "Autosaved",
+      "justNow": "Just now",
+      "minutesAgo": "{n} min ago"
+    },
+    "modes": {
+      "popular": "POPULAR",
+      "standard": { "title": "Standard", "desc": "Classical chess · vs engine or friend" },
+      "shvedki": { "title": "Bughouse", "desc": "Two boards · piece reserve" },
+      "puzzles": { "title": "Puzzles", "desc": "Trainer · find the best move" },
+      "online": { "title": "Online", "desc": "Find an opponent over the network" },
+      "openings": { "title": "Openings", "desc": "Variation tree · ECO A00–E99" },
+      "analysis": { "title": "Analysis", "desc": "Top-4 moves with explanation" }
+    },
+    "stats": {
+      "played": "Played",
+      "solved": "Puzzles solved",
+      "rating": "Rating",
+      "streak": "Streak"
+    },
+    "recentGames": {
+      "moves": "{n} moves",
+      "open": "Open",
+      "result": {
+        "win": "Win",
+        "loss": "Loss",
+        "draw": "Draw",
+        "whiteWins": "White wins",
+        "blackWins": "Black wins"
+      },
+      "opponent": {
+        "aiName": "ИИ",
+        "aiLevel": "{name} · lvl {level}",
+        "hotseat": "Hotseat",
+        "team": "Team 2"
+      },
+      "relative": {
+        "justNow": "just now",
+        "minutesAgo": "{n} min ago",
+        "hoursAgo": "{n}h ago",
+        "yesterday": "yesterday",
+        "daysAgo": "{n}d ago",
+        "unknown": "—"
+      }
+    },
+    "bottom": {
+      "recent": {
+        "title": "Recent games",
+        "sub": "Your game history",
+        "subCount": "{shown} of {total} · show all",
+        "history": "History",
+        "empty": {
+          "title": "Nothing yet",
+          "desc": "Play your first game — it will show up here."
+        }
+      },
+      "daily": {
+        "title": "Daily puzzle",
+        "sub": "A random unsolved puzzle",
+        "mateInN": "Mate in {n}",
+        "bestMove": "Find the best move",
+        "eloShort": "ELO {n}",
+        "sideWhite": "White to move",
+        "sideBlack": "Black to move",
+        "solve": "Solve",
+        "streakBadge": "STREAK +{n}",
+        "empty": {
+          "title": "Loading puzzle",
+          "desc": "Today's tactical puzzle will appear here soon."
+        }
+      }
+    }
+  },
+  "game": {
+    "modes": {
+      "standard": "Standard",
+      "shvedki": "Bughouse",
+      "openingTraining": "Opening training",
+      "standardFromPosition": "Standard · from position"
+    },
+    "eval": {
+      "label": "Position evaluation bar"
+    },
+    "captured": {
+      "label": "Captured pieces list"
+    },
+    "sidebar": {
+      "moves": "Moves",
+      "flip": "⇅ Flip",
+      "newGame": "+ New",
+      "resign": "Resign",
+      "offerDraw": "Draw",
+      "setupTitle": "Match setup",
+      "mode": "Mode",
+      "timeControl": "Time control",
+      "ai": "AI",
+      "aiOff": "Off (Hotseat)",
+      "aiPlays": "Plays {side} · lvl. {level}",
+      "sideWhite": "white",
+      "sideBlack": "black",
+      "devOverlay": "Dev overlay"
+    },
+    "promotion": {
+      "title": "Pawn promotion",
+      "subtitle": "Choose a piece",
+      "queen": "Queen",
+      "rook": "Rook",
+      "bishop": "Bishop",
+      "knight": "Knight"
+    },
+    "gameOver": {
+      "title": "Game over",
+      "newGame": "New game",
+      "dismiss": "Close"
+    },
+    "boardA": {
+      "movesTitle": "Moves · Board A"
+    },
+    "boardB": {
+      "movesTitle": "Moves · Board B"
+    },
+    "team": {
+      "team1Black": "Team 1 · White · A",
+      "team2Black": "Team 2 · Black · A",
+      "team2White": "Team 2 · White · B",
+      "team1Black2": "Team 1 · Black · B"
+    },
+    "color": {
+      "white": "White",
+      "black": "Black"
+    },
+    "status": {
+      "whiteToMove": "White to move",
+      "blackToMove": "Black to move",
+      "check": "· Check!",
+      "aiThinking": "· AI thinking…",
+      "noAnalysis": "No analysis",
+      "matedSide": "Mate · {side} won",
+      "stalemateDraw": "Stalemate · Draw",
+      "draw50": "Draw · 50-move rule",
+      "drawMaterial": "Draw · insufficient material",
+      "drawRepetition": "Draw · threefold repetition",
+      "timeForfeit": "Time · {side} won"
+    },
+    "result": {
+      "wonTitle": "{side} won!",
+      "resignTitle": "{side} resigned",
+      "drawTitle": "Draw",
+      "checkmate": "Checkmate.",
+      "stalemate": "Stalemate.",
+      "draw50": "50-move rule.",
+      "drawMaterial": "Insufficient material.",
+      "drawRepetition": "Threefold repetition.",
+      "agreedDraw": "Agreed draw.",
+      "resignation": "Resigned.",
+      "timeForfeit": "Time expired."
+    },
+    "toast": {
+      "saved": "Saved",
+      "saveNotFound": "Save not found",
+      "pgnImported": "PGN imported",
+      "fenCopied": "FEN copied",
+      "fenInvalid": "Invalid FEN",
+      "pgnImportFailed": "Failed to import PGN",
+      "check": "Check!",
+      "illegalDrop": "Illegal: {reason}",
+      "saveCorrupted": "Save corrupted — new game started",
+      "loaded": "Loaded",
+      "fenApplied": "FEN applied",
+      "error": "Error: {message}",
+      "fenInvalidReason": "Invalid FEN: {reason}"
+    },
+    "shvedki": {
+      "mateOnBoard": "Mate on board {moved}! Team {team} has the last move on board {other}",
+      "playingStatus": "Board A: {a} · Board B: {b}",
+      "team1Won": "Team 1 won!",
+      "team2Won": "Team 2 won!",
+      "drawTitle": "Draw",
+      "reasonMate": "Checkmate.",
+      "reasonResign": "Team {team} resigned.",
+      "reasonTime": "Team {team} ran out of time.",
+      "reasonDraw": "Game ended in a draw."
+    }
+  }
+}

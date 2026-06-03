@@ -1,0 +1,14 @@
+// Compile-time SCSS variables (breakpoints, etc.)
+// CSS custom properties (colors, spacing, etc.) live in tokens.scss
+
+// Breakpoints
+// $bp-md = граница «телефон vs всё остальное»:
+//   ниже — bottom-nav, top-nav скрыт;
+//   выше — top-nav, bottom-nav скрыт.
+$bp-sm: 480px;
+$bp-md: 728px;
+$bp-lg: 900px;
+$bp-xl: 1024px;
+
+// Минимальная ширина приложения — ниже выезжает горизонтальный скролл.
+$bp-app-min: 320px;
