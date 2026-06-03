@@ -1,1 +1,0 @@
-var e=`/chess/`;function t(t){return`${e}${t.replace(/^\/+/,``)}`}function n(t){return`${e}figures/${t}.png`}export{n,t};
