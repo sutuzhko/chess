@@ -1,1 +1,0 @@
-var e=class extends Error{constructor(e){super(e),this.name=`AssertionError`}};function t(t,n){if(!t)throw new e(n)}export{t};

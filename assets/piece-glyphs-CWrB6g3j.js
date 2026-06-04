@@ -1,0 +1,1 @@
+import{m as e}from"./index-CdCgdtni.js";function t(t,n){return e(`${t}-${n}`)}var n={pawn:1,knight:3,bishop:3,rook:5,queen:9,king:0},r={queen:0,rook:1,bishop:2,knight:3,pawn:4,king:5};export{n,t as r,r as t};
